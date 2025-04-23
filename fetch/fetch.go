@@ -32,7 +32,7 @@ type (
 	}
 )
 
-func Fetch(ctx context.Context, requestUrl string, requestOptions ...*RequestOptions) (*Request, error) {
+func NewRequest(ctx context.Context, requestUrl string, requestOptions ...*RequestOptions) (*Request, error) {
 	client := http.Client{}
 
 	options := RequestOptions{}
